@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <title>TrackTrek Website</title>
+</head>
+
+<body class="body">
+    <header>
+        <nav>
+            <div class="left-side">
+                <img id="logo" src="images/logo.svg" alt="logo">
+            </div>
+            <div class="mid-side">
+                <ul>
+                    <!--ياشبااااب الهوم ده للصفحه الي انتم فيها غيرو كلاس الهوم-->
+                    <li><a href="home.html" class="home">home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">Tracks</a></li>
+                    <li><a href="">about us</a></li>
+                    <div class="animation-hover default"></div>
+                </ul>
+            </div>
+            <div class="right-side">
+                <button class="mode" id="bttn">
+                    <i class='bx bxs-moon' style="color:inherit;"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <div class="left-cont">
+                <div class="details">
+                    <h3>Track<span>Trek</span></h3>
+                    <p>TrackTrek empowers you to create and follow roadmaps tailored to your goals. Whether you're
+                        planning a project, mapping
+                        out a career path, or tracking milestones, our intuitive tools ensure you stay on course with
+                        precision and ease.</p>
+                    <li><a href="">explore it</a></li>
+                </div>
+            </div>
+            <div class="right-cont">
+                <img src="images/main.svg" class="mainimage" alt="">
+            </div>
+        </div>
+    </section>
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About TrackTrek</h3>
+                <p>TrackTrek simplifies your journey by providing intuitive roadmap solutions for planning, tracking,
+                    and
+                    achieving goals efficiently.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="">Tracks</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: <a href="mailto:support@tracktrek.com">support@tracktrek.com</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TrackTrek. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!--darkmode script-->
+    <script>
+        const body = document.querySelector("body");
+            const bttn = document.querySelector(".mode");
+            const logo = document.getElementById('logo')
+            bttn.onclick = function () {
+                body.classList.toggle("dark");
+                bttn.firstElementChild.classList.toggle('bxs-sun')
+                if (body.classList[1] == 'dark') {
+                    document.querySelector('.mainimage').src = 'images/main-dark.svg'
+                    logo.src = 'images/logo-dark.svg';
+                }
+                else { logo.src = 'images/logo.svg'; document.querySelector('.mainimage').src = 'images/main.svg' }
+            };
+    </script>
+</body>
+
+</html>
