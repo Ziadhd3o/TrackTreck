@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styletracks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <title>TrackTrek Website</title>
+</head>
+<body class="body">
+    <header>
+        <nav>
+            <div class="left-side">
+                <img id="logo" src="images/logo.svg" alt="logo">
+            </div>
+            <div class="mid-side">
+                <ul id="list">
+                    <!--ياشبااااب الهوم ده للصفحه الي انتم فيها غيرو كلاس الهوم-->
+                    <li><a href="home.html">home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="tracks.html" class="home">Tracks</a></li>
+                    <li><a href="credits.html" >Credits</a></li>
+                    <div class="animation-hover default"></div>
+                </ul>
+            </div>
+            <div class="right-side">
+                <button class="iconbox">
+                    <div class="icon"></div>
+                </button>
+                <button class="mode" id="bttn">
+                    <i class='bx bxs-moon' style="color:inherit;"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h3 class="title">Our <span style="color: var(--primary-color-dark);">Available</span> Tracks : </h3>
+        <ul>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>front end</h4>
+                        <p>Front-end development focuses on designing and building user interfaces, ensuring functionality, responsiveness, and
+                        seamless user experience on websites or applications.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>back end</h4>
+                        <p>Back-end development manages server-side operations, databases, and application logic, enabling seamless data
+                        processing, functionality, and secure communication with front-end interfaces.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>c++</h4>
+                        <p>C++ is a high-performance, general-purpose programming language known for its object-oriented features, memory
+                        management, and suitability for system-level development.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>cybersecurity</h4>
+                        <p>Cybersecurity involves protecting systems, networks, and data from cyber threats using technologies, processes, and
+                        practices to ensure confidentiality, integrity, and availability.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>game development</h4>
+                        <p>Game development is the process of designing, creating, and programming video games, involving coding, artwork, sound,
+                        and testing to deliver an engaging user experience.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="card">
+                    <div class="lft-card">
+                        <h4>AI</h4>
+                        <p>AI (Artificial Intelligence) refers to the simulation of human intelligence in machines, enabling them to perform tasks
+                        like learning, problem-solving, and decision-making.</p>
+                    </div>
+                    <div class="rgt-card">
+                        <a href="">view</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About TrackTrek</h3>
+                <p>TrackTrek simplifies your journey by providing intuitive roadmap solutions for planning, tracking,
+                    and
+                    achieving goals efficiently.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="tracks.html">Tracks</a></li>
+                    <li><a href="credits.html">Credits</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: <a href="mailto:support@tracktrek.com">support@tracktrek.com</a></li>
+    
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TrackTrek. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const body = document.querySelector("body");
+        const bttn = document.querySelector(".mode");
+        const logo = document.getElementById('logo');
+        const list = document.getElementById('list');
+        const icon = document.querySelector('.iconbox');
+        bttn.onclick = function () {
+            body.classList.toggle("dark");
+            bttn.firstElementChild.classList.toggle('bxs-sun')
+            if (body.classList[1] == 'dark') {
+                logo.src = 'images/logo-dark.svg';
+            }
+            else { logo.src = 'images/logo.svg';}
+        };
+        icon.onclick = function () {
+            list.classList.toggle("show");
+            document.querySelector('.icon').classList.toggle('rot');
+        };
+    </script>
+</body>
+</html>

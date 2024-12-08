@@ -322,6 +322,7 @@ nav ul :nth-child(2):hover~.animation-hover {
     animation-timeline: view();
     animation-range: entry 40% cover 45%;
     animation-direction:alternate;
+    animation-fill-mode: both;
     border-left: 8px solid var(--light-dark);
     padding-left: 155px;
     border-right: 8px solid var(--primary-color);
