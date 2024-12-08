@@ -23,7 +23,6 @@
     --sm-font: 1.25rem;
 }
 
-
 ::-webkit-scrollbar{
     background-color: #fff;
 }
@@ -208,6 +207,24 @@ nav .right-side button .icon{
     }
 }
 
+nav .default {
+    position: absolute;
+    width: 130px;
+    height: 120%;
+    left: 82.3%;
+    top: -2px;
+    background-color: var(--primary-color-dark);
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+}
+
+nav ul li a:hover {
+    color: wheat !important;
+}
+
 .animation-hover {
     transition: .6s ease;
 
@@ -225,10 +242,10 @@ nav ul :nth-child(3):hover~.animation-hover {
     left: 55.8%;
 }
 
-nav ul :nth-child(4):hover~.animation-hover {
-    width: 130px;
+nav ul :nth-child(2):hover~.animation-hover {
+    width: 165px;
     height: 120%;
-    left: 82.3%;
+    left: 22.9%;
 }
 
 
@@ -245,12 +262,12 @@ nav ul :nth-child(4):hover~.animation-hover {
         font-size: var(--sm-font);
     }
 
-    
+
 
     .default {
-        width: 150px !important;
+        width: 125px !important;
         height: 120%;
-        left: 22.8%;
+        left: 82.3%;
     }
 
     nav ul :nth-child(1):hover~.animation-hover {
@@ -262,154 +279,89 @@ nav ul :nth-child(4):hover~.animation-hover {
     nav ul :nth-child(3):hover~.animation-hover {
         width: 100px !important;
         height: 120%;
-        left: 56.5%;
+        left: 56.85%;
     }
 
-    nav ul :nth-child(4):hover~.animation-hover {
-        width: 105px !important;
+    nav ul :nth-child(2):hover~.animation-hover {
+        width: 155px !important;
         height: 120%;
-        left: 83.4%;
+        left: 22.9%;
     }
 }
-/*----> nav customize end here*/
-/* resource */
-.resources-main .landimage{
-    width: 100%;
-    height: 400px;
-    background: url(images/resourceimage.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding-left: 50px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.resources-main .landimage h1{
-    font-size: var(--lg-font);
-}
-.resources-main .landimage p{
-    font-size: var(--md-font);
-    text-transform: capitalize;
-}
-.resources-main .box-cards{
-    padding: 50px 0;
 
-}
-.resources-main .box-cards ul{
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-wrap: wrap;
-    padding: 0 65px;
-    margin: 0 auto;
-    gap: 20;
-}
-.resources-main .box-cards ul li{
-    width: 350px;
-    height: 550px;
-    margin: 10px 20px;
-    box-shadow: #FF8C0030 0 0 10px 1px;
-    border: #ddd 2px solid;
-    border-radius: 10px;
-    overflow: hidden;   
-}
-.resources-main .box-cards ul li .card-image{
+/*----> nav customize end here*/
+
+
+/*section customize*/
+.container {
     width: 100%;
-    height: 200px;
-    background: linear-gradient(var(--primary-color-dark),var(--primary-color-light));
+
+    height: fit-content;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-transform: uppercase;
-    color: white;
-    font-size: var(--lg-font);
-    
-    text-shadow: #FFCC80 0 5px 1px;
+    justify-content: center;
+    text-align: center;
+    animation-name: fadeIn;
+    animation-duration: 600ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
-.resources-main .box-cards ul li .text{
-    padding-left: 10px;
-    padding-top: 20px;
-    position: relative;
+.title {
+    font-size: 60px;
+    margin-top:100px;
+}
+
+.container ul h3{
+    font-size: 50px;
+    
+}
+.container ul li {
+    margin: 80px 0;
+    animation: blurAnim linear;
+    animation-timeline: view();
+    animation-range: entry 40% cover 45%;
+    animation-direction:alternate;
+    border-left: 8px solid var(--light-dark);
+    padding-left: 155px;
+    border-right: 8px solid var(--primary-color);
+    padding-right: 155px;
+    border-radius: 14px;
+}
+
+.container ul p{
+    font-size: 35px;
+    
+}
+
+.end {
     width: 100%;
-    height: calc(100% - 200px);
-}
-.resources-main .box-cards ul li .text .depart{
-    margin: 5px 0;
-    text-transform: capitalize;
-    color: #aaa;
-}
-.resources-main .box-cards ul li .text .title{
-    font-size: var(--md-font);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    color: var(--primary-color-dark);
-    
-}
-.resources-main .box-cards ul li .text .desc{
-    padding-right: 20px;
-    color: #888;
-}
-.resources-main .box-cards ul li .text .link{
-    position: absolute;
-    bottom: 25px;
-    text-transform: capitalize;
-    background-color: var(--light-dark);
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    /* margin-top:30px; */
-    transition: .3s ease;
-    cursor: pointer;
-}
-.resources-main .box-cards ul li .text .link:hover {
+    height:100px;
+    display: flex;
+    align-items: center;
     background-color: var(--primary-color);
 }
 
-/* Dark mode */
-body.dark {
-    background-color: #000;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
-body.dark nav{
-    background-color: #2b2b2b;
--webkit-box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
-    -moz-box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
-    box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
-}
-body.dark nav ul li a{
-    color: white;
-}
-body.dark .details p{
-    color: rgba(255, 255, 255, 0.616);
-}
-body.dark header nav .right-side button{
-    background-color: #fff;
-    color: black;
-}
+@keyframes blurAnim {
 
-body.dark .resources-main .box-cards ul li{
-    border: none;
-    box-shadow: #FF5C0050 0 0 80px 1px;
-    position: relative;
-}
-body.dark .resources-main .box-cards ul li .text {
-    backdrop-filter: blur(50px) saturate(1);
-}
-body.dark .resources-main .box-cards ul li .text p{
-    color: white;
-}
+    0% {
+        filter: blur(20px);
+    }
+    100% {
+        filter: blur(0px);
+    }
 
-/*body.dark .resources-main .box-cards ul li::before{
-    position: absolute;
-    content: '';
-    width: 500px;
-    height: 300px;
-    bottom: -150px;
-    right: 50%;
-    translate: 50% 0;
-    border-radius: 50%
-}*/
+    
+}
+/*end section customize*/
 
 /*footer*/
 #main-footer {
@@ -477,5 +429,29 @@ body.dark .resources-main .box-cards ul li .text p{
     margin: 0;
     color: #888;
 }
-
-/*end footer*/
+ /* dark mode */
+ body.dark {
+    background-color: #000;
+}
+body.dark nav{
+    background-color: #2b2b2b;
+-webkit-box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
+    -moz-box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
+    box-shadow: -2px 3px 65px -38px rgba(255, 255, 255, 1);
+}
+body.dark nav ul li a{
+    color: white;
+}
+body.dark .details p{
+    color: rgba(255, 255, 255, 0.616);
+}
+body.dark header nav .right-side button{
+    background-color: #fff;
+    color: black;
+}
+body.dark section .container *{
+    color: white;
+}
+body.dark section .container ul li{
+    border-left-color: #cccccc;
+}

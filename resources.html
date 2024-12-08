@@ -22,16 +22,19 @@
                 <img id="logo" src="images/logo.svg" alt="logo">
             </div>
             <div class="mid-side">
-                <ul>
+                <ul id="list">
                     <!--ياشبااااب الهوم ده للصفحه الي انتم فيها غيرو كلاس الهوم-->
                     <li><a href="home.html">home</a></li>
                     <li><a href="resources.html" class="home">Resources</a></li>
                     <li><a href="">Tracks</a></li>
-                    <li><a href="">about us</a></li>
+                    <li><a href="credits.html">Credits</a></li>
                     <div class="animation-hover default"></div>
                 </ul>
             </div>
             <div class="right-side">
+                <button class="iconbox">
+                    <div class="icon"></div>
+                </button>
                 <button class="mode" id="bttn">
                     <i class='bx bxs-moon' style="color:inherit;"></i>
                 </button>
@@ -145,7 +148,7 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="">Tracks</a></li>
-                    <li><a href="">About Us</a></li>
+                    <li><a href="credits.html">About Us</a></li>
                 </ul>
             </div>
             <div class="footer-section contact">
@@ -161,17 +164,23 @@
         </div>
     </footer>
     <script>
-        const body = document.querySelector("body");
-        const bttn = document.querySelector(".mode");
-        const logo = document.getElementById('logo')
-        bttn.onclick = function () {
-            body.classList.toggle("dark");
-            bttn.firstElementChild.classList.toggle('bxs-sun')
-            if (body.classList[1] == 'dark') {
-                logo.src = 'images/logo-dark.svg';
-            }
-            else { logo.src = 'images/logo.svg';}
-        };
+            const body = document.querySelector("body");
+            const bttn = document.querySelector(".mode");
+            const logo = document.getElementById('logo');
+            const list = document.getElementById('list');
+            const icon = document.querySelector('.iconbox');
+            bttn.onclick = function () {
+                body.classList.toggle("dark");
+                bttn.firstElementChild.classList.toggle('bxs-sun')
+                if (body.classList[1] == 'dark') {
+                    logo.src = 'images/logo-dark.svg';
+                }
+                else { logo.src = 'images/logo.svg';}
+            };
+            icon.onclick = function () {
+                list.classList.toggle("show");
+                document.querySelector('.icon').classList.toggle('rot');
+            };
     </script>
 </body>
 

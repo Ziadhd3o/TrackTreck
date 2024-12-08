@@ -23,6 +23,23 @@
     --sm-font: 1.25rem;
 }
 
+::-webkit-scrollbar{
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color-dark);
+    border: 5px solid white;
+    border-radius: 30px;
+}
+body.dark::-webkit-scrollbar{
+    background-color: #000;
+}
+body.dark::-webkit-scrollbar-thumb{
+    background: var(--primary-color-dark);
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
 /*default settings*/
 *{
     padding: 0;
@@ -78,7 +95,9 @@ nav .mid-side ul li a{
     padding: 10px;
     border-radius: 20px;
 }
-
+nav .right-side {
+    display: flex;
+}
 nav .right-side button {
     font-size: 2rem;
     background-color: black;
@@ -93,6 +112,7 @@ nav .right-side button {
     border-width: 0;
     cursor: pointer;
     transition: .3s ease;
+    margin-right: 10px;
 }
 nav .right-side button:hover {
     background-color: var(--light-gray);
@@ -107,12 +127,16 @@ nav .right-side button i{
 nav .right-side button:hover > i{
     color: black;
 }
-
-@media screen and (max-width:1024px) {
-    .mid-side{
-        display: none;
-    }
+nav .right-side .iconbox{
+    display: none;
 }
+nav .right-side button .icon{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color-dark);
+    border-radius: 50% 0 50% 50%;
+}
+
 nav .default {
     position: absolute;
     width: 95px;
@@ -138,17 +162,17 @@ nav ul li a:hover
 nav ul :nth-child(2):hover~.animation-hover {
     width: 165px;
     height: 120%;
-    left: 22.3%;
+    left: 22.9%;
 }
 nav ul :nth-child(3):hover~.animation-hover {
     width: 120px;
     height: 120%;
-    left: 54.5%;
+    left: 55.8%;
 }
 nav ul :nth-child(4):hover~.animation-hover {
-    width: 140px;
+    width: 130px;
     height: 120%;
-    left: 80.5%;
+    left: 82.3%;
 }
 
 @media screen and (max-width:1600px) {
@@ -176,19 +200,19 @@ nav ul :nth-child(4):hover~.animation-hover {
     nav ul :nth-child(2):hover~.animation-hover {
         width: 150px !important;
         height: 120%;
-        left: 22.3%;
+        left: 22.8%;
     }
 
     nav ul :nth-child(3):hover~.animation-hover {
-        width: 110px !important;
+        width: 100px !important;
         height: 120%;
-        left: 54.5%;
+        left: 56.5%;
     }
 
     nav ul :nth-child(4):hover~.animation-hover {
-        width: 135px !important;
+        width: 105px !important;
         height: 120%;
-        left: 80.5%;
+        left: 83.4%;
     }
 }
 
@@ -263,8 +287,70 @@ section .right-cont img{
         }
 }
 @media screen and (max-width:1057px) {
-    nav .mid-side {
+    nav .right-side .iconbox{
+        display: initial;
+        transition: 0.3s ease;
+    }
+    
+    nav .right-side .iconbox .icon{
+        transition: 0.8s ease;
+    }
+    
+    nav .right-side .iconbox .rot{
+        -webkit-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+        rotate: 360deg;
+    }
+    
+    nav .mid-side ul .animation-hover{
         display: none;
+    }
+    nav .mid-side ul{
+        display: none;
+    }
+
+    nav .mid-side ul.show{
+        position: absolute;
+        display: inline-block;
+        box-shadow: #0002 0 0 10px 1px;
+        top: 50px;
+        right: 170px;
+        z-index: 100;
+        background-color: var(--light-gray);
+        width: 300px;
+        border-radius: 30px;    
+    }
+    nav .mid-side ul li a{
+        margin: 0;
+        display: inline-block;
+        width: 100%;
+        line-height: 80px;
+        text-align: center;
+        font-weight: bold;
+        position: relative;
+    }
+    nav .mid-side ul li a:hover,nav .mid-side ul li a.home{
+        color: #FF8C00 !important;
+        text-shadow: var(--primary-color-dark) 0 0 10px;
+    }
+    
+    nav .mid-side ul li a.home::before{
+        position: absolute;
+        content: '';
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #FF8C00;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    -moz-box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    box-shadow: 0px 0px 17px 0px rgba(255, 140, 0, 1);
+    }
+    body.dark .mid-side ul {
+        background-color: #2b2b2b;
     }
 }
 @media screen and (max-width:1200px) {
