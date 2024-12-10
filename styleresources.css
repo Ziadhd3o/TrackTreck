@@ -22,24 +22,6 @@
     --md-font: 1.5rem;
     --sm-font: 1.25rem;
 }
-::-webkit-scrollbar{
-    background-color: #fff;
-}
-::-webkit-scrollbar-thumb{
-    background: var(--primary-color-dark);
-    border: 5px solid white;
-    border-radius: 30px;
-}
-body.dark::-webkit-scrollbar{
-    background-color: #000;
-}
-body.dark::-webkit-scrollbar-thumb{
-    background: var(--primary-color-dark);
-    border: 5px solid black;
-    border-radius: 30px;
-}
-
-
 
 /*default settings*/
 * {
