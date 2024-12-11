@@ -83,7 +83,7 @@ header nav h3 {
     background-color: var(--primary-color);
     padding: 10px 20px;
     border-radius: 20px;
-
+    text-transform: capitalize;
 }
 /*end nav customize*/
 /*container customize*/
@@ -122,6 +122,7 @@ header nav h3 {
     margin-right: 20px;
     color: black;
     font-size: 1.5rem;
+    text-transform: capitalize;
 }
 
 .timeline-row .timeline-time small {
@@ -135,11 +136,9 @@ header nav h3 {
     /* background: #FF8C0050; */
     border: 2px solid var(--primary-color);
     border-radius: 20px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
+    text-transform: capitalize;
     text-align: center;
+    
     /* -webkit-box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.75);
         box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.75) */
@@ -160,7 +159,7 @@ header nav h3 {
     font-size: 1.2rem;
     font-weight: 500;
     color: var-(--light-dark);
-    /* background-color: white; */
+    /* background-color: ; */
 }
 
 
@@ -238,6 +237,7 @@ header nav h3 {
 .timeline-row:nth-child(even) .timeline-content {
     margin-left: 29px;
     text-align: left;
+    
     /* direction: rtl; */
     /* overflow: hidden; */
 }
@@ -279,8 +279,11 @@ header nav h3 {
 .timeline-row:nth-child(odd) .timeline-content {
     margin-right: 29px;
     text-align: right;
+    animation: leftAnime linear;
     /* direction: rtl; */
 }
+
+/*end*/
 .timeline-row:nth-child(odd) .timeline-content h4{
     padding-right: 20px;
     text-shadow: #ff981a -2px 0 1px;
@@ -416,4 +419,24 @@ body.dark .back a,body.dark .back button{
 }
 body.dark .back a:hover,body.dark .back button:hover {
     background-color: #fff;
+}
+
+
+.animate-on-scroll {
+    opacity: 20%;
+    scale: .2;
+    transition: .6s ease;
+}
+
+.animate {
+    scale: 1;
+    opacity: 100%;
+}
+
+.animate-on-scrollx {
+    opacity: 10%;
+    transition: 2s ease;
+}
+.animatex {
+    opacity: 100%;
 }

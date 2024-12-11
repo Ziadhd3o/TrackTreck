@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +14,11 @@
 
     <title>TrackTrek Website</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <h3>Frontend Roadmap</h3>
+            <h3>c++ Roadmap</h3>
         </nav>
     </header>
 
@@ -28,90 +30,127 @@
                         First Mission<small>Concept 1</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                        
-                        <h4>Internet</h4>
-                        <p>- How does the internet work ?<br>- What is HTTP ?<br>- What is Domain Name ?<br>- What is Hosting ? <br>- DNS and how it works ? <br>- Browsers and how they work ?</p>
+
+                        <h4>intro to the language</h4>
+                        <p>
+                            - what is c++ ?
+                            <br>- why use c++ ?
+                            <br>- c vs c++ ?</p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Second Mission<small>Concept 1</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>HTML</h4>
-                        <p>- Learn the basics<br>- Writing Semantic HTML<br>- Forms and Validations<br>- Accessibility <br>-
-                            SEO Basics</p>
+
+                        <h4>setting up your environment </h4>
+                        <p>- installing c++
+                            <br>- code editors/ IDEs
+                            <br>- running your first program
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Second Mission<small>Concept 2</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>CSS</h4>
-                        <p>- Learn the basics<br>- Making Layouts<br>- Responsive Design</p>
+
+                        <h4>basic operations</h4>
+                        <p>- bitwise operators
+                            <br> - loops: for / while
+                            <br> - logical operators
+                            <br> - arithmetic operators
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Second Mission<small>Concept 3</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>JavaScript</h4>
-                        <p>- Learn the basics<br>- Learn DOM Manipulation<br>- Fetch API / Ajax (XHR)</p>
+                        <h4>function</h4>
+                        <p>- lambda<br>- operators</p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Third Mission<small>Concept 1</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>Version Control Systems</h4>
-                        <p>- Learn Git</p>
+
+                        <h4>data types</h4>
+                        <p>- static typing 
+                            <br> - dynamic typing:
+                            <br> • RTTI
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Third Mission<small>Concept 2</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>VCS Hosting</h4>
-                        <p>- Learn GitHub</p>
+                        <h4>pointer and references</h4>
+                        <p>
+                            - references
+                            <br> - memory model
+                            <br> - lifetime of objects
+                            <br> - smart pointers: 
+                            <br>&nbsp;&nbsp;&nbsp; • weak_ptr
+                            <br>&nbsp;&nbsp;&nbsp; • unique_ptr
+                            <br> - raw pointers: 
+                            <br>&nbsp;&nbsp;&nbsp; • new/delete operators
+                            <br>&nbsp;&nbsp;&nbsp; • memory leakage
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Fourth Mission<small>Concept 1</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>Package Managers</h4>
-                        <p>- Learn npm</p>
+
+                        <h4>structuring codebase</h4>
+                        <p>
+                            - scope
+                            <br> - namespaces
+                            <br> - forward declaration
+                            <br> - code splitting: header / CPP files
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Fourth Mission<small>Concept 2</small>
                     </div>
                     <div class="timeline-content animate-on-scroll">
-                
-                        <h4>Pick a framework</h4>
-                        <p>- React <br>- Vue.js <br>- Angular<br>- Svelte<br>- Solid JS<br>- Qwik</p>
+
+                        <h4>structures and classes</h4>
+                        <p>
+                            - rule of zero,five,three 
+                            <br>- inheritance
+                            <br>&nbsp;&nbsp;&nbsp; • multiple inheritance
+                            <br>&nbsp;&nbsp;&nbsp; • diamond inheritance
+                            <br> - object oriented programming: 
+                            <br>&nbsp;&nbsp;&nbsp; • static polymorphism
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪ overloading of functions
+                            <br>&nbsp;&nbsp;&nbsp; • dynamic polymorphism
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪ virtual methods
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪ virtual tables
+
+                        </p>
                     </div>
                 </div>
-        
+
                 <div class="timeline-row">
                     <div class="timeline-time animate-on-scrollx">
                         Fifth Mission<small>Concept End</small>
@@ -132,15 +171,14 @@
     </div>
     <script>
         const body = document.querySelector("body");
-            const bttn = document.querySelector(".mode");
-            bttn.onclick = function () {
-                body.classList.toggle("dark");
-                bttn.firstElementChild.classList.toggle('bxs-sun');
-            };
+        const bttn = document.querySelector(".mode");
+        bttn.onclick = function () {
+            body.classList.toggle("dark");
+            bttn.firstElementChild.classList.toggle('bxs-sun');
+        };
 
     </script>
-
-
-<script src="animationOnscroll.js"></script>
+    <script src="animationOnscroll.js"></script>
 </body>
+
 </html>
